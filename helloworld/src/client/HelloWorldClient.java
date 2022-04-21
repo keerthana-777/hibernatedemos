@@ -14,7 +14,7 @@ public class HelloWorldClient {
 		Session session = HIbernateUtil.getSessionFactory().openSession();
 		session.beginTransaction();
 		
-		Message message = new Message("hello world from client");
+		Message message = new Message("hello again from annotations");
 		
 		session.save(message);
 		

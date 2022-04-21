@@ -1,4 +1,4 @@
-package domain;
+package entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -7,16 +7,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity 
+@Entity
 @Table(name="message")
-
 public class Message {
-	
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="ID")
-	
 	private Long id;
+	
+	@Column(name="TEXT")
 	private String text;
 	
 	public Message() {}
@@ -39,6 +39,11 @@ public class Message {
 
 	public void setText(String text) {
 		this.text = text;
+	}
+
+	@Override
+	public String toString() {
+		return "Message [id=" + id + ", text=" + text + "]";
 	}
 	
 	

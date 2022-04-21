@@ -19,7 +19,7 @@
         <property name="show_sql">true</property>
               
         <!--  Use annotation based mapping -->   
-        <mapping class="domain.Message" />  
+        <mapping class="entity.Message" />  
         
         
     </session-factory>
